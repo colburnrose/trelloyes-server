@@ -8,7 +8,7 @@ const bodyParser = express.json();
 
 listRouter
   .route("/list")
-  .get("/list", (req, res) => {
+  .get((req, res) => {
     app.get("/list", (req, res) => {
       res.json(lists);
     });
