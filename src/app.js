@@ -136,7 +136,7 @@ app.post("/list", (req, res) => {
   logger.info(`List with id ${id} created`);
   res.status(201).location(`http://localhost:8000/list/${ids}`).json({ id });
 });
-
+// DELETE: /card/:id
 app.delete("/card/:id", (req, res) => {
   const { id } = req.params;
   const cardIndex = cards.findIndex((c) => c.id == id);
@@ -157,7 +157,7 @@ app.delete("/card/:id", (req, res) => {
 
   res.status(204).end();
 });
-
+// DELETE: /list/:id
 app.delete("/list/:id", (req, res) => {
   const { id } = req.params;
 
