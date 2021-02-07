@@ -3,7 +3,6 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
-const { v4: uuid } = require("uuid");
 const { NODE_ENV } = require("./config");
 const cardRouter = require("./card-router/card-router");
 const listRouter = require("./list-router/list-router");

@@ -8,7 +8,7 @@ const bodyParser = express.json();
 
 listRouter
   .route("/list")
-  .get("/list", (req, res) => {
+  .get((req, res) => {
     app.get("/list", (req, res) => {
       res.json(lists);
     });
@@ -70,3 +70,5 @@ listRouter
     logger.info(`List with id ${id} deleted.`);
     res.status(204).end();
   });
+
+module.exports = listRouter;
